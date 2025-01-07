@@ -4,7 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Megan Ashworth</title>
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+        color: #333; 
+        transition: text-shadow 0.3s ease; 
+        }
+
+        h1:hover {
+        text-shadow: 0 0 20px rgba(135, 206, 235, 1), 0 0 30px rgba(135, 206, 235, 0.6); 
+        }
+
     .navbar {
       background-color: #e0e0f8; 
       padding: 1rem;
@@ -39,38 +57,115 @@
     }
 
     .navbar .nav-links a:hover {
-      background-color: #333;
+      background-color: #615e8a;
       color: #fff;
     }
+    #home img {
+        width: 250px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        transition: transform 1.5s ease; 
+        }
+
+    #home img:hover {
+    transform: rotate(360deg);}
 
     html {
       scroll-behavior: smooth;
     }
+
+    .project-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 8px;
+      width: 250px;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card img {
+      border-radius: 8px;
+      object-fit: cover;
+      height: 150px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    }
+    #about {
+      background: #e0e0f8;
+      padding: 2rem;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    #about:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+    }
+    .icon {
+        width: 3rem; 
+        height: auto; 
+        transition: transform 0.3s ease, filter 0.3s ease; 
+        }
+
+        .icon:hover {
+        transform: translateY(-10px); 
+        filter: drop-shadow(0 0 10px rgba(133, 211, 204, 0.7)); 
+        }
+
+     footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f4f4f4;
+    }
   </style>
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <a href="#home" class="logo">Megan Ashworth</a>
+    <a href="#home" class="logo">Welcome to my portfolio!</a>
     <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <!-- Link to open the CV in PDF format -->
+        <a href="#projects">Projects</a> <!-- Link to the Projects page -->
         <a href="C:\Users\Admin\Desktop\me\Portfolio\Assets\MeganAshworthCV.pdf" target="_blank">My CV</a>
     </div>
-</nav>
+  </nav>
 
   <section id="home" class="section" style="text-align: center; padding: 4rem 2rem;">
     <div style="display: flex; align-items: center; justify-content: center; gap: 2rem;">
       <div>
         <img src="file:///c%3A/Users/Admin/Desktop/me/Portfolio/Assets/me.jpg" alt="Megan Ashworth" style="width: 250px; border-radius: 50%; margin-bottom: 1rem;">
       </div>
+
       <div style="text-align: left;">
         <h1 style="font-size: 2rem; margin: 0;">Megan Ashworth</h1>
         <p style="font-size: 1.2rem; font-style: italic;">Junior Web Developer & UI Designer</p>
         <div style="display: flex; gap: 2rem; margin-top: 1.5rem;">
+
           <div>
-            <h2 style="text-decoration: underline;">Programming Skills</h2>
+            <h2> Programming Skills</h2>
             <ul style="list-style: none; padding: 0;">
               <li>Prototyping</li>
               <li>Wireframing</li>
@@ -80,8 +175,9 @@
               <li>Debugging</li>
             </ul>
           </div>
+
           <div>
-            <h2 style="text-decoration: underline;">Soft Skills</h2>
+            <h2> Soft Skills</h2>
             <ul style="list-style: none; padding: 0;">
               <li>Problem-Solving</li>
               <li>Collaboration</li>
@@ -95,7 +191,6 @@
       </div>
     </div>
   </section>
-  
 
   <section id="about" class="section" style="background: #e0e0f8; padding: 2rem; text-align: center;">
     <h2 style="font-size: 1.8rem;">About Me</h2>
@@ -104,12 +199,25 @@
       I hold a higher certificate in Mobile App and Web development and have a strong foundation 
       in web technologies such as HTML & CSS, JavaScript, and React Native.
     </p>
+
     <p style="max-width: 800px; margin: 1rem auto;">
       With experience in creating user-centered designs and interactive prototypes using Figma, 
       I am passionate about crafting interfaces that are both visually appealing and highly functional.
       My work combines design principles and user experiences.
     </p>
   </section>
+
+  <div class="icons" style="display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; width: 100%; max-width: 1000px; margin-left: auto; margin-right: auto;">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\7423887_react_react native_icon.png" alt="React Native" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\9035061_logo_javascript_icon.png" alt="JavaScript" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\104494_html5_html_icon.png" alt="HTML" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\programming-language.png" alt="Kotlin" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\2993664_brand_brands_logo_logos_word_icon.png" alt="Word" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\excel.png" alt="Excel" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\11401189_canva_graphic_design_icon.png" alt="Canva" class="icon">
+    <img src="C:\Users\Admin\Desktop\me\Portfolio\Assets\7564187_figma_logo_brand_icon.png" alt="Figma" class="icon">
+</div>
+
 
   <section id="projects" class="section" style="background: #f4f4f4; padding: 2rem; text-align: center;">
     <h2 style="font-size: 1.8rem;">Previous Projects</h2>
@@ -156,20 +264,19 @@
               box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
             }
           </style>          
-      <!-- WEDE  module -->
-      <div class="project-card">
-        <h3>Megs Cookbook Website</h3>
-        <p></p>
-      </div>
-      
-      <!-- WILL module -->
-      <div class="project-card">
-        <h3>NPO Website</h3>
-        <p></p>
-      </div>
-      
+        <!-- WEDE  module -->
+        <div class="project-card">
+            <h3>Megs Cookbook Website</h3>
+            <p></p>
+        </div>
+        
+        <!-- WILL module -->
+        <div class="project-card">
+            <h3>NPO Website</h3>
+            <p></p>
+        </div>
+        
       <!-- MAST module -->
-      
         
         <div class="project-cards" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
           <!-- MAST Module -->
