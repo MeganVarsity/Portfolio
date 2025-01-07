@@ -133,8 +133,67 @@
         transform: translateY(-10px); 
         filter: drop-shadow(0 0 10px rgba(133, 211, 204, 0.7)); 
         }
+        
+.project-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+.project-description {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
      footer {
+        margin-top: auto;
       text-align: center;
       padding: 1rem;
       background-color: #f4f4f4;
@@ -148,7 +207,6 @@
     <a href="#home" class="logo">Welcome to my portfolio!</a>
     <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#projects">Projects</a> <!-- Link to the Projects page -->
         <a href="C:\Users\Admin\Desktop\me\Portfolio\Assets\MeganAshworthCV.pdf" target="_blank">My CV</a>
     </div>
   </nav>
@@ -220,7 +278,7 @@
 
 
   <section id="projects" class="section" style="background: #f4f4f4; padding: 2rem; text-align: center;">
-    <h2 style="font-size: 1.8rem;">Previous Projects</h2>
+    <h2 style="font-size: 1.8rem;">My Previous Projects</h2>
     
     <div class="project-cards" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
         <style>
@@ -263,46 +321,157 @@
               transform: translateY(-10px); 
               box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
             }
-          </style>          
-        <!-- WEDE  module -->
-        <div class="project-card">
-            <h3>Megs Cookbook Website</h3>
-            <p></p>
-        </div>
-        
-        <!-- WILL module -->
-        <div class="project-card">
-            <h3>NPO Website</h3>
-            <p></p>
-        </div>
-        
-      <!-- MAST module -->
-        
-        <div class="project-cards" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-          <!-- MAST Module -->
-          <div class="project-card">
-            <h3>Christoffels Menu App</h3>
-            <p>A menu app designed to enhance restaurant ordering.</p>
-            <!-- YouTube link -->
-            <a href="https://youtu.be/tlgXptZA6Es?si=0aAZ4B30C7okKUXT" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #ff4b2b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">
-              Watch the app in action!
-            </a>
-          </div>
-        </div>
-      </section>
-      
-      <section id="contact" class="section" style="background: #e0e0f8; padding: 2rem; text-align: center;">
-        <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Let's Connect!</h2>
-        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center;">
-          <p>Email: <a href="mailto:megannashworth@gmail.com" style="text-decoration: none; color: inherit;">megannashworth@gmail.com</a></p>
-          <p>Phone: <a href="tel:+27815887653" style="text-decoration: none; color: inherit;">081 588 7653</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/MeganAshworth" target="_blank" style="text-decoration: none; color: inherit;">Megan Ashworth</a></p>
-          <p>GitHub: <a href="https://github.com/MeganVarsity" target="_blank" style="text-decoration: none; color: inherit;">MeganVarsity</a></p>
-        </div>
-      </section>
+          </style>    
+                
+       <!-- WEDE module -->
+<div class="project-card">
+  <h3>Megs Cookbook Website</h3>
+  <p class="project-description">For my Web Development module, we were tasked with creating a website for any non-profit organization. As someone passionate about cooking and baking, I decided to create a cookbook website to share helpful tips, tricks, and easy recipes. The website features six pages: Home, About Us, Our Work, Gallery, and Contact Us. You can view the project on GitHub via the link below.</p>
+  <button class="read-more-btn">Read More</button>
+</div>
 
-  <footer>
-    <p>&copy; 2025 Megan Ashworth. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<!-- Modal for full-screen view -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Megs Cookbook Website</h3>
+      <p>For my Web Development module, we were tasked with creating a website for any non-profit organization. As someone passionate about cooking and baking, I decided to create a cookbook website to share helpful tips, tricks, and easy recipes. The website features six pages: Home, About Us, Our Work, Gallery, and Contact Us. You can view the project on GitHub via the link below.</p>
+      <a href="https://github.com/VCNMB/wede5020-poe-MeganVarsity" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #ff4b2b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">
+          View the project on GitHub
+      </a>
+  </div>
+</div>
+
+<script>
+  // Get modal and elements
+  var modal = document.getElementById("modal");
+  var btn = document.querySelector(".read-more-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  // Show the modal when "Read More" button is clicked
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  // Close the modal when the close button is clicked
+  closeBtn.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // Close the modal if the user clicks anywhere outside the modal content
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+
+        
+    
+     <!-- WILL module -->
+<div class="project-card">
+  <h3>ETN App & Website</h3>
+  <p class="project-description">This project was part of my WILL module on integrated learning, which focuses on teamwork and taking responsibility for individual tasks. In my team, we divided the workload, and I took on the role of head of design for both the app and website, as well as error handling and checking. The app and website were developed for an organization called "Empowering the Nations," a family-run business that provides opportunities for domestic workers seeking higher education to improve their job prospects. They offer affordable courses, ranging from 6 weeks to 6 months, to help individuals advance in their careers. The goal was to create an informative app and website that clearly displays all course options in a simple yet effective way.</p>
+  <button class="read-more-btn" id="read-more-btn-will">Read More</button>
+</div>
+
+<!-- Modal for full-screen view -->
+<div id="modal-will" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>ETN App & Website</h3>
+      <p>This project was part of my WILL module on integrated learning, which focuses on teamwork and taking responsibility for individual tasks. In my team, we divided the workload, and I took on the role of head of design for both the app and website, as well as error handling and checking. The app and website were developed for an organization called "Empowering the Nations," a family-run business that provides opportunities for domestic workers seeking higher education to improve their job prospects. They offer affordable courses, ranging from 6 weeks to 6 months, to help individuals advance in their careers. The goal was to create an informative app and website that clearly displays all course options in a simple yet effective way.</p>
+  </div>
+</div>
+
+<script>
+  // Get modal and elements for WILL module
+  var modalWill = document.getElementById("modal-will");
+  var btnWill = document.getElementById("read-more-btn-will");
+  var closeBtnWill = document.querySelector("#modal-will .close-btn");
+
+  // Show the modal when "Read More" button is clicked
+  btnWill.onclick = function() {
+      modalWill.style.display = "block";
+  }
+
+  // Close the modal when the close button is clicked
+  closeBtnWill.onclick = function() {
+      modalWill.style.display = "none";
+  }
+
+  // Close the modal if the user clicks anywhere outside the modal content
+  window.onclick = function(event) {
+      if (event.target == modalWill) {
+          modalWill.style.display = "none";
+      }
+  }
+</script>
+
+<!-- Christoffels Menu App Project Card -->
+<div class="project-card">
+  <h3>Christoffels Menu App</h3>
+  <p class="project-description" id="project-description">The Christoffels Menu App was developed to streamline restaurant menu management. The app allows users to display a day's menu across three categories—starters, main courses, and desserts. It provides the functionality to delete courses from the menu and add new dishes on a separate page. Users can input the dish name, assign it to a specific course, add the price, and provide a description. Additionally, the app calculates and displays the average price for each course, making it easier for restaurant staff to manage pricing. The total number of menu items is also shown at the top of the page for user convenience. I opted for a clean, sleek design that prioritizes ease of use while maintaining a professional aesthetic.</p>
+  <button class="read-more-btn" id="read-more-btn-christoffels">Read More</button>
+</div>
+
+<!-- Modal for full-screen view -->
+<div id="modal-christoffels" class="modal">
+  <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Christoffels Menu App</h3>
+      <p>The Christoffels Menu App was developed to streamline restaurant menu management. The app allows users to display a day's menu across three categories—starters, main courses, and desserts. It provides the functionality to delete courses from the menu and add new dishes on a separate page. Users can input the dish name, assign it to a specific course, add the price, and provide a description. Additionally, the app calculates and displays the average price for each course, making it easier for restaurant staff to manage pricing. The total number of menu items is also shown at the top of the page for user convenience. I opted for a clean, sleek design that prioritizes ease of use while maintaining a professional aesthetic. For those interested in seeing the app in action, I’ve included a link to a YouTube demo below.</p>
+      <a href="https://youtu.be/tlgXptZA6Es?si=0aAZ4B30C7okKUXT" target="_blank" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #ff4b2b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem;">
+          Watch the app in action!
+      </a>
+  </div>
+</div>
+
+<script>
+  // Get modal and elements for Christoffels Menu App
+  var modalChristoffels = document.getElementById("modal-christoffels");
+  var btnChristoffels = document.getElementById("read-more-btn-christoffels");
+  var closeBtnChristoffels = document.querySelector("#modal-christoffels .close-btn");
+
+  // Show the modal when "Read More" button is clicked
+  btnChristoffels.onclick = function() {
+      modalChristoffels.style.display = "block";
+  }
+
+  // Close the modal when the close button is clicked
+  closeBtnChristoffels.onclick = function() {
+      modalChristoffels.style.display = "none";
+  }
+
+  // Close the modal if the user clicks anywhere outside the modal content
+  window.onclick = function(event) {
+      if (event.target == modalChristoffels) {
+          modalChristoffels.style.display = "none";
+      }
+  }
+</script>
+
+      
+<section id="contact" class="section" style="background: #e0e0f8; padding: 2rem 0; text-align: center; width: 100%; box-sizing: border-box;">
+    <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Let's Connect!</h2>
+    <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto;">
+      <p>Email: <a href="mailto:megannashworth@gmail.com" style="text-decoration: none; color: inherit;">megannashworth@gmail.com</a></p>
+      <p>Phone: <a href="tel:+27815887653" style="text-decoration: none; color: inherit;">081 588 7653</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/MeganAshworth" target="_blank" style="text-decoration: none; color: inherit;">Megan Ashworth</a></p>
+      <p>GitHub: <a href="https://github.com/MeganVarsity" target="_blank" style="text-decoration: none; color: inherit;">MeganVarsity</a></p>
+    </div>
+  </section>
+  <style>
+    #contact a:hover {
+        color: #555; 
+    }
+
+    #contact p:hover {
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+</style>
+  
+
+    </body>
+    
+    </html>
